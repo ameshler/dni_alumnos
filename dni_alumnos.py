@@ -124,7 +124,14 @@ def menu_frecuencia(dni_alumnos):
     print("\n-----5 - Frecuencia de cada dígito en los DNI-----")
     # Imprimimos la frecuencia de cada dígito en los DNIs
     for apellido, dni in dni_alumnos.items():
-        print(f"Frecuencia de {str.capitalize(apellido)}: {contar_frecuencia_dni(dni)}")
+        frecuencias = contar_frecuencia_dni(dni)
+        # Ordenamos las frecuencias por dígito para mejor presentación
+        frecuencias_ordenadas = sorted(frecuencias.items())
+        
+        print(f"# {str.capitalize(apellido)} (DNI: {dni}):")
+        for digito, count in frecuencias_ordenadas:
+            print(f"   Dígito {digito}: aparece {count} {'vez' if count == 1 else 'veces'}")
+        print()  # Espacio entre alumnos
 
 def menu_suma_digitos(suma_digitos_dni, dni_alumnos):
     
