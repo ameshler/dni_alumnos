@@ -290,27 +290,31 @@ opciones = {
 }
 
 while True:
-    print("\n***MENU EJERCICIOS TP INTEGRDOR II***")
-    print("--- A. Operaciones con DNIs ---")
-    print("1 - Union de conjuntos")
-    print("2 - Intersección de conjuntos")
-    print("3 - Diferencia entre pares de conjuntos")
-    print("4 - Diferencia simétrica")
-    print("5 - Frecuencia de cada dígito en los DNI")
-    print("6 - Suma total dígitos DNI")
-    print("7 - Evaluacion lógica: Dígito compartido")
-    print("8 - Evaluacion lógica: Diversidad numérica")
-    print("9 - Evaluacion lógica: Pares de dni con mismo valor en la suma de sus dígitos")
-    print("10 - Compatibilidad entre conjuntos de DNI")
-    print("--- B. Operaciones con años de nacimiento ---")
-    print("11 - Cantidad de años pares e impares")
-    print("12 - Grupo Z u Old School")
-    print("13 - Verifica año bisiesto")
-    print("14 - Producto cartesiano años y edades")
-    print("0 - Salir")
-    opcion = input("Ingese una opción: ")
-    if opcion == '0':
-        break
+    ver_menu = input("\n¿Desea ver el menú? (S/N): ").lower()
+    if ver_menu == 's':
+        print("\n***MENU EJERCICIOS TP INTEGRDOR II***")
+        print("--- A. Operaciones con DNIs ---")
+        print("1 - Union de conjuntos")
+        print("2 - Intersección de conjuntos")
+        print("3 - Diferencia entre pares de conjuntos")
+        print("4 - Diferencia simétrica")
+        print("5 - Frecuencia de cada dígito en los DNI")
+        print("6 - Suma total dígitos DNI")
+        print("7 - Evaluacion lógica: Dígito compartido")
+        print("8 - Evaluacion lógica: Diversidad numérica")
+        print("9 - Evaluacion lógica: Pares de dni con mismo valor en la suma de sus dígitos")
+        print("10 - Compatibilidad entre conjuntos de DNI")
+        print("--- B. Operaciones con años de nacimiento ---")
+        print("11 - Cantidad de años pares e impares")
+        print("12 - Grupo Z u Old School")
+        print("13 - Verifica año bisiesto")
+        print("14 - Producto cartesiano años y edades")
+        print("0 - Salir")
+        opcion = input("Ingese una opción: ")
+        if opcion == '0':
+            break
 
-    if opcion in opciones:
-        opciones[opcion]()
+        if opcion in opciones:
+            opciones[opcion]()
+    else:
+        exit()
